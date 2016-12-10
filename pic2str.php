@@ -14,6 +14,10 @@ class P2S{
         $this->colorCount = ceil(255 / count($this->chars));
     }
 
+    public function __destruct(){
+        imagedestroy($this->im);
+    }
+
     /**
      * 获取某个点的颜色值
      */
